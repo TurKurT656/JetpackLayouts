@@ -1,4 +1,4 @@
-package com.turkurt656.jetpacklayouts
+package com.turkurt656.jetpacklayouts.app
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,7 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.turkurt656.jetpacklayouts.ui.theme.JetpackLayoutsTheme
+import com.turkurt656.jetpacklayouts.app.ui.theme.JetpackLayoutsTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
