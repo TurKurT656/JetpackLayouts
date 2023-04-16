@@ -10,10 +10,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 
 @Composable
-fun MainScreen() {
-    // val navController = rememberNavController()
+fun MainScreen(navController: NavHostController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -22,7 +23,7 @@ fun MainScreen() {
         Button(
             modifier = Modifier.fillMaxWidth(),
             onClick = {
-                // navController.navigate("circular")
+                navController.navigate("circular")
             }
         ) {
             Text(text = "Circular")
@@ -33,5 +34,5 @@ fun MainScreen() {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    MainScreen()
+    MainScreen(rememberNavController())
 }
