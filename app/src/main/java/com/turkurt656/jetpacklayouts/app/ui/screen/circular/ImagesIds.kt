@@ -1,0 +1,25 @@
+package com.turkurt656.jetpacklayouts.app.ui.screen.circular
+
+val imageIds = listOf(
+    "47rl13747g3j3tag6ab751f4bke9byf0",
+    "95d1a3e5b99782d2b52ef6e063efe4eb",
+    "778b8ca4ed4e4a4691561cc6fc4be969",
+    "697d79b58fd60a23aa8b91b30e6cb1b5",
+    "7b3b7ba0f7c15447384343592db72d0b",
+    "62b3f0d606cbe346e7ac3842c860154b",
+    "c2266e5b7f6a71e2b5a8ddebe2571d03",
+    "37df13743g363tag0af359f4b3edbyf5",
+    "a67e7d4f3a39f9c2aaa3ae95d8d8e13e",
+    "bb9bd218021ea38ed391e89835fe92b3",
+    "b1adc8e15cd0b5ea7c36c83f9e590547",
+    "b299b68135b6a9b75599a0732b56a4d3",
+    "4e4ecd22a5bf2d242efa25f367bb16a7",
+    "82408bcf546abc80a3215ba053786528",
+    "f6cb137d4dff61464a26b1ae55525625",
+    "aa987a2954126e17906019d8f312cafe",
+    "8e8814c1d6c4ad029ec2cd90249ccbd6",
+    "0f1f664fc27a26d618911d914232ee13",
+    "1b7b2c2239689d64453aaf29c041a62e",
+    "f680d02a1431aec66f3b72d9e87bac4b",
+    "1361f6ecbc5abd95f50d43cd6b72612e",
+)
