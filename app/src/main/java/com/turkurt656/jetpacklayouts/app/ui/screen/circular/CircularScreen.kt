@@ -28,6 +28,8 @@ fun CircularScreen(navController: NavHostController) {
         ExtraRadiusHexaCircular()
         Spacer(modifier = Modifier.size(8.dp))
         ExtraRadiusSpiralCircular()
+        Spacer(modifier = Modifier.size(8.dp))
+        ExactAngleCircular()
         Spacer(modifier = Modifier.size(16.dp))
     }
 }

@@ -11,10 +11,17 @@ import androidx.compose.ui.unit.Dp
 interface CircularScope {
     @Stable
     fun Modifier.extraRadius(radius: Dp): Modifier
+
+    @Stable
+    fun Modifier.exactAngle(angle: Float): Modifier
 }
 
 internal object CircularScopeInstance : CircularScope {
     @Stable
     override fun Modifier.extraRadius(radius: Dp): Modifier =
         then(ExtraRadius(radius))
+
+    @Stable
+    override fun Modifier.exactAngle(angle: Float): Modifier =
+        then(ExactAngle(angle))
 }

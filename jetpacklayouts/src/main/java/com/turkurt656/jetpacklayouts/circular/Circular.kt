@@ -44,7 +44,7 @@ private fun circularMeasurePolicy(overrideRadius: (() -> Dp)?, startAngle: () ->
         // Calculate layout size
         val overallRadius = overrideRadius?.invoke()?.roundToPx() ?: (centerPlaceable.height / 2)
         val maxExtraRadius = contentPlaceables.mapNotNull { placeable ->
-            (placeable.parentData as? ExtraRadius)?.radius?.roundToPx()
+            (placeable.parentData as? CircularParentData)?.extraRadius?.roundToPx()
         }.maxOrNull() ?: 0
         val totalRadius = overallRadius + maxExtraRadius
         val biggestChildSize = contentPlaceables.maxOfOrNull { it.height } ?: 0
@@ -57,9 +57,10 @@ private fun circularMeasurePolicy(overrideRadius: (() -> Dp)?, startAngle: () ->
             val middle = layoutSize / 2
             var angle = startAngle()
             contentPlaceables.forEach { placeable ->
-                val angleRadian = angle * Math.PI / 180
+                val finalAngle = (placeable.parentData as? CircularParentData)?.exactAngle ?: angle
+                val angleRadian = finalAngle * Math.PI / 180
                 val radius =
-                    overallRadius + ((placeable.parentData as? ExtraRadius)?.radius?.roundToPx()
+                    overallRadius + ((placeable.parentData as? CircularParentData)?.extraRadius?.roundToPx()
                         ?: 0)
                 placeable.place(
                     x = (middle + radius * sin(angleRadian) - placeable.height / 2).toInt(),
