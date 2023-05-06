@@ -22,13 +22,16 @@ fun Circular(
     content: @Composable CircularScope.() -> Unit,
 ) {
     Layout(
+        measurePolicy = circularMeasurePolicy(overrideRadius, startAngle),
         contents = listOf(center, { CircularScopeInstance.content() }),
         modifier = modifier,
-        measurePolicy = circularMeasurePolicy(overrideRadius, startAngle)
     )
 }
 
-private fun circularMeasurePolicy(overrideRadius: (() -> Dp)?, startAngle: () -> Float) =
+private fun circularMeasurePolicy(
+    overrideRadius: (() -> Dp)?,
+    startAngle: () -> Float,
+) =
     MultiContentMeasurePolicy { (centerMeasurables: List<Measurable>, contentMeasurables: List<Measurable>),
                                 constraints: Constraints ->
 
