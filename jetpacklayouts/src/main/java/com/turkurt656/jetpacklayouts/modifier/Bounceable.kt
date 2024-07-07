@@ -28,7 +28,7 @@ fun Modifier.bounceClickable(
     onClickLabel: String? = null,
     role: Role? = null,
     onClick: () -> Unit,
-) = composed(
+) = this.composed(
     inspectorInfo = debugInspectorInfo {
         name = "bounceClickable"
         properties["scaleDown"] = scaleDown
@@ -62,7 +62,7 @@ fun Modifier.bounceClickable(
     onClickLabel: String? = null,
     role: Role? = null,
     onClick: () -> Unit,
-) = composed(
+) = this.composed(
     inspectorInfo = debugInspectorInfo {
         name = "bounceClickable"
         properties["interactionSource"] = interactionSource
