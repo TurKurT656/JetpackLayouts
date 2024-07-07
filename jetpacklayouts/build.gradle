@@ -58,7 +58,7 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.github.turkurt656'
             artifactId = 'JetpackLayouts'
-            version = '1.0.0'
+            version = '0.1.0'
 
             afterEvaluate {
                 from components.release
