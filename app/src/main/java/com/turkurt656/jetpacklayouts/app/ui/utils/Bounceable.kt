@@ -1,4 +1,4 @@
-package com.turkurt656.jetpacklayouts.modifier
+package com.turkurt656.jetpacklayouts.app.ui.utils
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.AnimationSpec

@@ -10,7 +10,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import com.turkurt656.jetpacklayouts.modifier.bounceClickable
+import com.turkurt656.jetpacklayouts.app.ui.utils.bounceClickable
 
 @Composable
 fun CenterAvatar(
