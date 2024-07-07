@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
 }
 
 android {
@@ -34,6 +35,15 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = "1.4.2"
     }
+
+    publishing {
+        publishing {
+            singleVariant("release") {
+                withSourcesJar()
+                withJavadocJar()
+            }
+        }
+    }
 }
 
 dependencies {
@@ -45,4 +55,18 @@ dependencies {
     implementation "androidx.compose.animation:animation"
     implementation 'androidx.compose.ui:ui-tooling-preview'
     debugImplementation 'androidx.compose.ui:ui-tooling'
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.github.turkurt656'
+            artifactId = 'JetpackLayouts'
+            version = '1.0.0'
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
 }
