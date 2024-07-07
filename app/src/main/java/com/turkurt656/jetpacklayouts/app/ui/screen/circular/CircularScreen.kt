@@ -1,35 +1,26 @@
 package com.turkurt656.jetpacklayouts.app.ui.screen.circular
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.MaterialTheme
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavHostController
+import com.turkurt656.jetpacklayouts.app.NavigateButton
 
 @Composable
-fun CircularScreen(navController: NavHostController) {
+fun CircularScreen() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(MaterialTheme.colorScheme.primary)
-            .verticalScroll(rememberScrollState()),
+            .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Spacer(modifier = Modifier.size(16.dp))
-        OnlyRadiusCircular()
-        Spacer(modifier = Modifier.size(8.dp))
-        RadiusAngleCircular()
-        Spacer(modifier = Modifier.size(8.dp))
-        ExtraRadiusHexaCircular()
-        Spacer(modifier = Modifier.size(8.dp))
-        ExtraRadiusSpiralCircular()
-        Spacer(modifier = Modifier.size(8.dp))
-        ExactAngleCircular()
-        Spacer(modifier = Modifier.size(16.dp))
+        NavigateButton(text = "Only Radius", route = "o-r-circular")
+        NavigateButton(text = "Radius Angle", route = "r-a-circular")
+        NavigateButton(text = "Extra Radius Hexa", route = "e-r-h-circular")
+        NavigateButton(text = "Extra Radius Spiral", route = "e-r-s-circular")
+        NavigateButton(text = "Exact Angle", route = "e-a-circular")
     }
 }

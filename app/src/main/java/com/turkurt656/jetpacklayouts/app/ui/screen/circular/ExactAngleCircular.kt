@@ -3,8 +3,11 @@ package com.turkurt656.jetpacklayouts.app.ui.screen.circular
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.spring
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -18,7 +21,9 @@ import com.turkurt656.jetpacklayouts.circular.Circular
 @Composable
 fun ExactAngleCircular() {
     Box(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier
+            .background(MaterialTheme.colorScheme.primary)
+            .fillMaxSize(),
         contentAlignment = Alignment.Center,
     ) {
         var isExpanded by remember { mutableStateOf(false) }

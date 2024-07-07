@@ -9,7 +9,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
-import com.turkurt656.jetpacklayouts.app.nav.AppNavHost
 import com.turkurt656.jetpacklayouts.app.ui.theme.JetpackLayoutsTheme
 
 class MainActivity : ComponentActivity() {

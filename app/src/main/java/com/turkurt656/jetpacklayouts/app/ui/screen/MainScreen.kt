@@ -12,27 +12,24 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.turkurt656.jetpacklayouts.app.NavigateButton
 
 @Composable
-fun MainScreen(navController: NavHostController) {
+fun MainScreen() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp)
+            .padding(16.dp),
     ) {
-        Button(
-            modifier = Modifier.fillMaxWidth(),
-            onClick = {
-                navController.navigate("circular")
-            }
-        ) {
-            Text(text = "Circular")
-        }
+        NavigateButton(
+            text = "Circular",
+            route = "circular",
+        )
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    MainScreen(rememberNavController())
+    MainScreen()
 }
