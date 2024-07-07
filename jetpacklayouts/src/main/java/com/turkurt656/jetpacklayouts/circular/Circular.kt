@@ -38,8 +38,12 @@ private fun circularMeasurePolicy(
         require(centerMeasurables.size == 1) { "Center composable can have only one child" }
 
         // Measure children
-        val centerPlaceable: Placeable = centerMeasurables.first().measure(constraints)
-        val contentPlaceables: List<Placeable> = contentMeasurables.map { it.measure(constraints) }
+        val modifiedConstraints = constraints.copy(
+            minWidth = 0,
+            minHeight = 0,
+        )
+        val centerPlaceable: Placeable = centerMeasurables.first().measure(modifiedConstraints)
+        val contentPlaceables: List<Placeable> = contentMeasurables.map { it.measure(modifiedConstraints) }
 
         require(centerPlaceable.isCircle()) { "Center composable must be circle" }
         require(contentPlaceables.all { it.isCircle() }) { "Content composables must be circle" }
