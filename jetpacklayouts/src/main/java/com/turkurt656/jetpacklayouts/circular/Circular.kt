@@ -13,6 +13,17 @@ import kotlin.math.cos
 import kotlin.math.max
 import kotlin.math.sin
 
+
+/**
+ * A layout composable with [content].
+ * A composable function that arranges its children in a circular layout.
+ *
+ * @param modifier The modifier to be applied to the layout.
+ * @param overrideRadius A lambda function to override the radius of the circular layout (from center of the layout to center of the children's center). If sets to null it will be the radius of center child. Defaults to null.
+ * @param startAngle A lambda function to specify the starting angle for the first child. the starting point is 0'clock and clockwise. Defaults to 0.0f.
+ * @param center A composable function representing the center element of the circular layout.
+ * @param content A composable function defining the children to be placed in the circular layout.
+ */
 @Composable
 fun Circular(
     modifier: Modifier = Modifier,
