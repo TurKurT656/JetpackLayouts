@@ -31,6 +31,13 @@ implementation 'com.github.TurKurT656:JetpackLayouts:0.1.0-alpha3'
 
 ### Circular layout
 
+<!--suppress CheckImageSize -->
+<img src="/res/or.gif" width="250" height="250" alt="Only Radius"/>
+<img src="/res/ra.gif" width="250" height="250" alt="Radius Angle"/>
+<img src="/res/hex.gif" width="250" height="250" alt="Extra Radius Hex"/>
+<img src="/res/spiral.gif" width="250" height="250" alt="Extra Radius Spiral"/>
+<img src="/res/fab.gif" width="250" height="250" alt="Exact Angle"/>
+
 For basic usage you can use the below code:
 
 ```kotlin
