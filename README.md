@@ -1,6 +1,6 @@
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.0.0-blue.svg?style=flat&logo=kotlin)](https://kotlinlang.org)
-[![](https://jitpack.io/v/TurKurT656/JetpackLayouts.svg)](https://jitpack.io/#TurKurT656/JetpackLayouts)
-[![Apache 2 License](https://img.shields.io/github/license/InsertKoinIO/koin)](https://github.com/InsertKoinIO/koin/blob/main/LICENSE.txt)
+[![JitPack](https://jitpack.io/v/TurKurT656/JetpackLayouts.svg)](https://jitpack.io/#TurKurT656/JetpackLayouts)
+[![License: MIT](https://img.shields.io/badge/License-MIT-orange.svg)](https://github.com/TurKurT656/JetpackLayouts/LICENSE)
 
 # What is Jetpack Layouts?
 
