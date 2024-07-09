@@ -10,7 +10,7 @@
 
 Current available versions:
 - Stable: `NONE`
-- Unstable: `0.1.0-alpha3`
+- Unstable: `0.1.0-alpha4`
 
 **Step 1.** Add it in your root `build.gradle` at the end of repositories:
 ```gradle
@@ -24,7 +24,7 @@ dependencyResolutionManagement {
 ```
 **Step 2.** Add the dependency
 ```gradle
-implementation 'com.github.TurKurT656:JetpackLayouts:0.1.0-alpha3'
+implementation 'com.github.TurKurT656:JetpackLayouts:0.1.0-alpha4'
 ```
 
 ## Implementation
